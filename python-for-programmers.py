@@ -52,3 +52,98 @@ str(5 // 2) # converts integer to string
 
 # scalar types and values - int, float, NoneType (the null object), bool
 
+#int
+10 # normal int
+0b10 # binary
+0o10 # octal
+0x10 # hex
+int(3.5) # 3
+int(0b10) # 2
+int("6") # convert string to integer
+
+#float
+3.15
+3e8
+1.616e-35
+float(2) # 2.0
+float(2.0) # same as 2.0
+float("1.4") # generate float from int
+float("nan") # not a number value
+float("inf") # infinite value
+float("-inf") # infinite value
+
+#none
+None # null value, dont return anything on the REPL
+a = None
+a is None # returns True
+
+# Bool
+True
+False
+bool(0) # False
+bool(42) # True
+bool(0.0) # False
+bool(-1) # True
+bool([]) # False
+bool("") # False
+bool("Spam") # True
+bool("False") # True
+
+# Relational operation ==, !=, <, >, <=, >=
+g = 20
+g == 20 # True
+g == 13 # False
+g != 20 # False and so on
+
+# Conditional statements
+if True:     # dont forget the : at the end!!!
+    print("It is true")
+
+if 2 > 1:
+    print("two is bigger than one")
+
+if bool("hey"):
+    print("yeah!!!")
+
+if "hey":  # auto convert the expression as bool(expression)
+    print("hey!!")
+
+
+# if else
+if 2 > 1:
+    print("2 bigger than 1")
+else:
+    print("2 not bigger than 1")
+
+# multiples elses:
+if 1 > 2:
+    print("1 bigger than 2")
+elif 2 > 1:
+    print("2 is bigger than 1")
+else:
+    print("none of them")
+
+# while loops
+c = 0
+while c != 5:
+    print(c)
+    c += 1
+
+while True:
+    if 1 == 1:
+       break;
+
+# strings - they are utf-8
+'Word 1'
+"Word 2"
+'Ho' "He" 'He' # concatenates to HoHeHe
+""" This is
+a multiline
+String"""
+''' This is also a 
+multiline string'''
+# \n in Python translates to the correct \n for windows or unix
+# RAW STRING
+print(r'\n') # will print "\n" and not a new line because it is a raw string
+
+
