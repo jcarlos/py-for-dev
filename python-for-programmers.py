@@ -146,4 +146,61 @@ multiline string'''
 # RAW STRING
 print(r'\n') # will print "\n" and not a new line because it is a raw string
 
+# bytes - accept basically the same methods as strings
+d = b'some bytes'
 
+
+# list - mutable sequences of objects
+[1, 3, 5]
+a = ["el1", "2", "3"]
+a = ["el1", "2", "3",] # also works
+a[0]
+a[2]
+b = [] # empty list
+b.append("a")
+list("char") #  ['c','h','a','r']
+
+# dics
+d = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+
+# for-each
+#for item in ieterable:
+
+# functions
+def square(x):
+    return x*x
+# module codes are only executed once when imported
+
+def square(x=2): # default param 2
+    return x*x
+
+glb_var = 0
+b = 0
+def glb_function(a):
+    global glb_var
+    b = a
+    glb_var = a
+glb_function(10)
+print(b) # 0
+print(glb_var) # 10
+' ',join(['a', 'b', 'c']) # 'a b c'
+"i.am.here".partition('.') # ('i', 'am', 'here')
+
+departure, separator, arrival = "London:Edinburgh".partition(':')
+departure # London
+separator # :
+arrival # Edinburgh
+
+origin, _, destination = "Seattle-Boston".partition('-') # _ to discard the separator used as dummy value
+
+"Math constants: pi={m.pi}, e={m.e}".format(m=math)
+
+a = [0, 1, 3] 
+a[-1] # returns 3, avoid to use a[len(a) - 1]
+a[:2] # [0, 1]
+a[2:] # [3]
+b = a[:] # copies the whole list
+
+
+a = [0, 3, 9] 
+a.index(9) # 2 -> returned the index of the element 9
